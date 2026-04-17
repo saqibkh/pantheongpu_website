@@ -18,3 +18,10 @@ The website reads from docs/assets/web_data.json. You must generate this file fr
 # parse local results and update the website JSON
 python3 website_utils/generate_web_data.py
 ```
+
+### 3. Run Local Server
+Start the live preview server. It will auto-reload if you change any code or regenerate data.
+```bash
+mkdocs serve
+```
+Open https://www.google.com/search?q=http://127.0.0.1:8000 in your browser to view the performance leaderboard.

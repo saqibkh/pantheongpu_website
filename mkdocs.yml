@@ -45,6 +45,7 @@ nav:
       - Scheduler Virus: tests/scheduler.md
       - Baseline Metrics: tests/baseline_metrics.md 
   - Releases: release.md
+  - Insights: insights/index.md
 
 
 theme:
@@ -120,3 +121,11 @@ extra:
           note: >-
             Thanks for your feedback! Help us improve this page by
             opening an issue on GitHub.
+
+plugins:
+  - search
+  - blog:
+      enabled: true
+      blog_dir: insights
+      post_date_format: yyyy-MM-dd
+      authors_file: .authors.yml

@@ -47,7 +47,7 @@ def main():
                         gpu_info_map[g["id"]] = g
 
                 for test in data.get("test_results", []):
-                    test_name = test["Test Name"]
+                    test_name = test.get("Test Name", "Unknown_Test")
                     gid = test.get("GPU ID", 0)
                     
                     # Fetch the specific GPU's info safely
@@ -126,7 +126,7 @@ def main():
                             pass
 
         except Exception as e:
-            print(f"Skipping {f}: {e}")
+            print(f"Skipping {f} due to error: {e}")
 
     # 3. SAVE
     output_dir = os.path.dirname(OUTPUT_FILE)

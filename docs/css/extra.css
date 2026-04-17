@@ -160,3 +160,21 @@ h1 {
 #benchmarkTable td:not(:nth-child(1)) {
     white-space: nowrap;
 }
+
+/* --- Title-Only Blog Listing --- */
+.md-post--list .md-post__meta,
+.md-post--list .md-post__content,
+.md-post--list .md-post__action {
+    display: none !important;
+}
+
+.md-post--list {
+    padding: 12px 0 !important;
+    border-bottom: 1px solid var(--pantheon-border) !important;
+    margin-bottom: 0 !important;
+}
+
+.md-post--list .md-post__title {
+    font-size: 1.1rem !important;
+    font-weight: 600;
+}
